@@ -289,6 +289,10 @@ span.newSnowflake {
   margin-bottom: 1em;
 }
 
+.dadAlert {
+  background-color: red;
+}
+
 #slideshow {
   position: relative;
   display: flex;
