@@ -56,12 +56,6 @@ header {
   transition: top 0.5s ease-in-out;
 }
 
-@media (max-width: 365px) {
-  #header {
-    flex-direction: column;
-  }
-}
-
 #header-title-and-image {
   display: flex;
   align-items: center;
@@ -154,9 +148,7 @@ header {
 
 @media (max-width: 365px) {
   #dropmenu {
-    margin-top: 8em;
-    text-align: center;
-    right: unset;
+    margin-top: 18em;
   }
 }
 
@@ -225,22 +217,74 @@ header .underlineOnHover:hover {
   transform: translateY(-2px);
 }
 
+/* Christmas button setup */
+
 #christmasButton {
-  color: var(--header-text-color);
-  background: linear-gradient(180deg, var(--header-bg-color), 80%, #ddd);
-  font-size: 0.5em;
-  border-radius: 50%;
-  border: dashed gold 1px;
-  padding: 1em 1em;
-  margin: 1em 1em;
-  box-shadow: 2px 2px 5px rgb(var(--secondary-bg-color));
-  transition: transform 0.1s ease-in-out;
-  outline: none;
+  width: 2em;
+  height: 2em;
   cursor: pointer;
   position: fixed;
   bottom: 50%;
-  right: 10px;
-  z-index: 1;
+  right: 3em;
+}
+
+#snowflake-parts {
+  display: contents;
+}
+
+.stroke {
+  height: 2em;
+  width: 1px;
+  background-color: snow;
+  position: absolute;
+  left: 1em;
+}
+
+.stroke:before,
+.stroke:after {
+  content: "";
+  border: 1px solid snow;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: -2.5px;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+}
+
+.stroke:after {
+  bottom: 0;
+  transform: rotate(-135deg);
+}
+
+.stroke-2 {
+  transform: rotate(90deg);
+}
+
+.stroke-3 {
+  transform: rotate(45deg);
+}
+.stroke-4 {
+  transform: rotate(-45deg);
+}
+
+#snowflakeCaption {
+  text-align: center;
+  color: var(--header-text-color);
+  background: linear-gradient(180deg, var(--header-bg-color), 80%, #ddd);
+  font-size: 0.25em;
+  border-radius: 50%;
+  border: solid var(--main-text-color) 1px;
+  padding: 1.5em;
+  margin: 1em;
+  box-shadow: 2px 2px 5px rgb(var(--secondary-bg-color));
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 8em;
+  right: -1.2em;
+  transition: transform 0.1s ease-in-out;
 }
 
 @media (hover: none) {
@@ -249,15 +293,13 @@ header .underlineOnHover:hover {
   }
 }
 
-#christmasButton.pressed {
+#snowflakeCaption.pressed {
   transform: perspective(100px) translateZ(-15px);
-  background: none;
-  background-color: rgb(253, 71, 71);
-  box-shadow: 0px 0px 15px 2px rgb(74, 180, 74);
-  color: white;
 }
 
 span.newSnowflake {
+  /* Change colour of snowflake */
+  filter: invert(100%) grayscale(100%);
   top: 0;
   position: absolute;
   display: initial;
@@ -278,15 +320,13 @@ span.newSnowflake {
   font-size: 0.6em;
 }
 
-@media (max-width: 420px) {
-  #blurb {
-    padding-top: 6em;
-  }
-}
-
 #blurb > p {
   font-size: 1.5em;
   margin-bottom: 1em;
+}
+
+.dadAlert {
+  background-color: rgb(241, 89, 89);
 }
 
 #slideshow {
@@ -451,19 +491,32 @@ span.newSnowflake {
   box-shadow: 7px 0px 5px -5px rgb(var(--secondary-bg-color));
 }
 
-#schoolCaption {
+#figCaption {
+  position: relative;
+}
+
+.schoolCaptions {
   background-color: rgba(var(--secondary-bg-color), 0.3);
-  z-index: 1;
   text-align: center;
   margin: auto;
   max-width: 375px;
   width: 100%;
   box-shadow: 2px 2px 5px rgb(var(--secondary-bg-color));
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+#figCaption .schoolCaptions:not(:first-child) {
+  display: none;
+  opacity: 0;
 }
 
 #schoolsReached {
   padding: 2em 2em;
   text-align: center;
+  margin-top: 3em;
 }
 
 #schoolsReached ul {

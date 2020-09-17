@@ -27,7 +27,7 @@ window.onscroll = () => {
   if (prevScrollpos > currentScrollPos + 10 || currentScrollPos <= 30) {
     document.getElementById("header").style.top = "0";
   } else if (prevScrollpos + 5 < currentScrollPos) {
-    document.getElementById("header").style.top = "-300px";
+    document.getElementById("header").style.top = "-350px";
   }
   prevScrollpos = currentScrollPos;
 };
@@ -36,27 +36,30 @@ window.onscroll = () => {
 if (landingPage || communityEngagement) {
   const slides = document.querySelectorAll(".slideshowImages");
   slides.forEach((slide) => {
-    slide.style.display = "unset";
+    slide.style.display = "block";
   });
   let slideIndex = 0;
+
+  //Change caption
   if (communityEngagement) {
-    const schoolCaption = document.getElementById("schoolCaption");
+    const schoolCaptions = document.querySelectorAll(".schoolCaptions");
+    schoolCaptions.forEach((caption) => {
+      caption.style.display = "block";
+    });
     let schoolCaptionIndex = 0;
-    const schoolCaptionArray = [
-      "Chelsea Heights Primary School – 2019 Tree",
-      "Edithvale Primary School with Presents Families collected for the families. – 2019 Tree",
-      "Nepean School – 2019 Tree",
-      "St Joseph’s Primary School – 2019 Tree",
-    ];
     setInterval(() => {
+      schoolCaptions.forEach((caption) => {
+        caption.style.opacity = 0;
+      });
       schoolCaptionIndex++;
-      if (schoolCaptionIndex === schoolCaptionArray.length) {
+      if (schoolCaptionIndex === schoolCaptions.length) {
         schoolCaptionIndex = 0;
       }
-      schoolCaption.innerHTML = schoolCaptionArray[schoolCaptionIndex];
+      schoolCaptions[schoolCaptionIndex].style.opacity = 1;
     }, 5000);
   }
 
+  //Change slides
   setInterval(() => {
     slides.forEach((slide) => {
       slide.style.opacity = 0;
@@ -66,26 +69,19 @@ if (landingPage || communityEngagement) {
       slideIndex = 0;
     }
     slides[slideIndex].style.opacity = 1;
-    console.log(slideIndex);
   }, 5000);
 }
 
-//Change innerHTML with school tree slideshow
-
 //Christmas button click
 const christmasButton = document.getElementById("christmasButton");
-const cursor = snowflakeCursor();
-
 christmasButton.addEventListener("click", () => {
-  christmasButton.classList.toggle("pressed");
+  const caption = document.getElementById("snowflakeCaption");
+  const cursor = snowflakeCursor();
+  caption.classList.toggle("pressed");
   if (christmasButton.dataset.snowflake === "disabled") {
-    christmasButton.innerHTML =
-      "<div>Christmas</div><div>Magic</div><div>Off</div>";
     cursor.start();
     christmasButton.dataset.snowflake = "enabled";
   } else {
-    christmasButton.innerHTML =
-      "<div>Christmas</div><div>Magic</div><div>On</div>";
     cursor.stop();
     christmasButton.dataset.snowflake = "disabled";
   }
@@ -124,9 +120,18 @@ function snowflakeCursor() {
   }
 
   function onMouseMove(e) {
+    const oldPosX = cursor.x;
+    const oldPosY = cursor.y;
     cursor.x = e.clientX;
     cursor.y = e.clientY + prevScrollpos;
-    addParticle(cursor.x, cursor.y, possibleEmoji);
+    if (
+      cursor.x > oldPosX + 10 ||
+      cursor.x + 10 < oldPosX ||
+      cursor.y > oldPosY + 10 ||
+      cursor.y + 10 < oldPosY
+    ) {
+      addParticle(cursor.x, cursor.y, possibleEmoji);
+    }
   }
 
   function addParticle(x, y, character) {
