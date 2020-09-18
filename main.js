@@ -74,9 +74,10 @@ if (landingPage || communityEngagement) {
 
 //Christmas button click
 const christmasButton = document.getElementById("christmasButton");
+
+const cursor = snowflakeCursor();
 christmasButton.addEventListener("click", () => {
   const caption = document.getElementById("snowflakeCaption");
-  const cursor = snowflakeCursor();
   caption.classList.toggle("pressed");
   if (christmasButton.dataset.snowflake === "disabled") {
     cursor.start();
@@ -96,7 +97,6 @@ function snowflakeCursor() {
     y: height,
   };
   const particles = [];
-  const velocity = 0;
 
   function start() {
     bindEvents();
@@ -207,6 +207,7 @@ function snowflakeCursor() {
   return { start, stop };
 }
 
+//Days until Christmas
 const dateNow = () => {
   const today = new Date();
   const christmas = new Date(today.getFullYear(), 11, 25);

@@ -229,6 +229,7 @@ header .underlineOnHover:hover {
 }
 
 #snowflake-parts {
+  position: relative;
   display: contents;
 }
 
@@ -270,20 +271,20 @@ header .underlineOnHover:hover {
 }
 
 #snowflakeCaption {
+  user-select: none;
   text-align: center;
   color: var(--header-text-color);
-  background: linear-gradient(180deg, var(--header-bg-color), 80%, #ddd);
-  font-size: 0.25em;
+  background: linear-gradient(180deg, var(--header-bg-color), 70%, #ddd);
+  font-size: 0.5em;
   border-radius: 50%;
-  border: solid var(--main-text-color) 1px;
-  padding: 1.5em;
+  padding: 1.1em;
   margin: 1em;
   box-shadow: 2px 2px 5px rgb(var(--secondary-bg-color));
   outline: none;
   cursor: pointer;
   position: absolute;
-  top: 8em;
-  right: -1.2em;
+  top: 4em;
+  right: -1.8em;
   transition: transform 0.1s ease-in-out;
 }
 
@@ -295,6 +296,10 @@ header .underlineOnHover:hover {
 
 #snowflakeCaption.pressed {
   transform: perspective(100px) translateZ(-15px);
+  color: white;
+  border: none;
+  background: linear-gradient(180deg, rgb(245, 61, 61), 50%, rgb(190, 9, 9));
+  box-shadow: 0px 0px 5px 3px white;
 }
 
 span.newSnowflake {
