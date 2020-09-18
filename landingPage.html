@@ -14,6 +14,14 @@
       rel="stylesheet"
     />
     <script async defer src="./main.js"></script>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0"
+      nonce="eKdEBkIa"
+    ></script>
   </head>
   <body data-page="landingPage">
     <header id="header">
@@ -63,21 +71,46 @@
       </div>
     </header>
     <main>
-      <section id="blurb">
-        <p>
-          We are a family owned and run Christmas tree farm located on the
-          corner of Thames promenade and Riverend road, Bangholme.
-        </p>
-        <p>
-          Come and take a wander through our trees, taking the time to select
-          your perfect addition for Christmas. Once selected, enjoy our
-          Enchanted Forest and other activities while we cut down your tree and
-          bring it around for pick up.
-        </p>
-        <p>
-          We look forward to helping to make your Christmas as magical as
-          possible.
-        </p>
+      <section id="top-section">
+        <div id="blurb">
+          <p>
+            We are a family owned and run Christmas tree farm located on the
+            corner of Thames promenade and Riverend road, Bangholme.
+          </p>
+          <p>
+            Come and take a wander through our trees, taking the time to select
+            your perfect addition for Christmas. Once selected, enjoy our
+            Enchanted Forest and other activities while we cut down your tree
+            and bring it around for pick up.
+          </p>
+          <p>
+            We look forward to helping to make your Christmas as magical as
+            possible.
+          </p>
+        </div>
+        <div id="facebookFeed">
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/evergreenchrissytrees"
+            data-tabs="timeline, events"
+            data-width="350"
+            data-height="300"
+            data-small-header="true"
+            data-adapt-container-width="false"
+            data-hide-cover="true"
+            data-show-facepile="false"
+            data-lazy="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/evergreenchrissytrees"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/evergreenchrissytrees"
+                >Evergreen Christmas Trees</a
+              >
+            </blockquote>
+          </div>
+        </div>
         <!-- <p class="dadAlert">
           Sorry, we are out of stock now, see you next year.
         </p> -->

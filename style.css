@@ -316,13 +316,34 @@ span.newSnowflake {
 
 /* || Landing Page */
 
+#top-section {
+  display: flex;
+  place-items: center;
+  place-content: space-around;
+  padding-bottom: 3em;
+}
+
+@media (max-width: 1000px) {
+  #top-section {
+    flex-direction: column;
+  }
+}
+
+#facebookFeed {
+  display: flex;
+  margin: 2em 0em;
+}
+
 #blurb {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 3em 2.2em 2em;
+  padding: 3em 0em 2em;
   font-family: var(--main-text-font);
   font-size: 0.6em;
+  width: 50%;
+  justify-content: center;
+  line-height: 130%;
 }
 
 #blurb > p {
