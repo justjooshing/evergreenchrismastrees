@@ -329,9 +329,15 @@ span.newSnowflake {
   }
 }
 
-#facebookFeed {
+#facebookWrapper {
   display: flex;
   margin: 2em 0em;
+}
+
+#fbFeed {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px rgb(var(--secondary-bg-color));
 }
 
 #blurb {
