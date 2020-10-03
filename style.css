@@ -385,6 +385,12 @@ span.new-snowflake {
   }
 }
 
+@media (max-width: 400px) {
+  #slideshow-section {
+    padding-bottom: 3em;
+  }
+}
+
 .slideshow-images {
   position: absolute;
   margin: auto;
@@ -514,6 +520,12 @@ span.new-snowflake {
 @media (max-width: 420px) {
   #community-engagement-blurb {
     padding-top: 5em;
+  }
+}
+
+@media (max-width: 400px) {
+  #school-slideshow {
+    margin-top: 5em;
   }
 }
 
