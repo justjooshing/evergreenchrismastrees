@@ -352,6 +352,12 @@ span.new-snowflake {
   line-height: 130%;
 }
 
+@media (max-width: 1000px) {
+  #blurb {
+    width: 90%;
+  }
+}
+
 #blurb > p {
   font-size: 1.5em;
   margin-bottom: 1em;
