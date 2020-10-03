@@ -131,7 +131,7 @@ header {
   }
 }
 
-#dropmenu {
+#drop-menu {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -147,17 +147,17 @@ header {
 }
 
 @media (max-width: 365px) {
-  #dropmenu {
+  #drop-menu {
     margin-top: 18em;
   }
 }
 
 @media (min-width: 760px) {
-  #dropmenu {
+  #drop-menu {
     display: none;
   }
 }
-#dropmenu > a {
+#drop-menu > a {
   margin: 0.2em;
 }
 
@@ -175,7 +175,7 @@ footer {
   color: var(--header-text-color);
 }
 
-footer > #daysUntil {
+footer > #days-until {
   font-size: calc(8px + (16 - 8) * ((100vw - 250px) / (1600 - 250)));
   display: flex;
   justify-self: center;
@@ -201,25 +201,25 @@ a {
   font-family: inherit;
 }
 
-.underlineOnHover {
+.underline-on-hover {
   transition: text-decoration 0.5s ease-in-out;
   transition: transform 0.1s ease-in;
   text-decoration: none transparent;
 }
 
-header .underlineOnHover:hover {
+header .underline-on-hover:hover {
   text-decoration: underline;
   transform: translateY(2px);
 }
 
-.underlineOnHover:hover > figcaption {
+.underline-on-hover:hover > figcaption {
   text-decoration: underline;
   transform: translateY(-2px);
 }
 
 /* Christmas button setup */
 
-#christmasButton {
+#christmas-button {
   width: 2em;
   height: 2em;
   cursor: pointer;
@@ -270,7 +270,7 @@ header .underlineOnHover:hover {
   transform: rotate(-45deg);
 }
 
-#snowflakeCaption {
+#snowflake-caption {
   user-select: none;
   text-align: center;
   color: var(--header-text-color);
@@ -289,12 +289,12 @@ header .underlineOnHover:hover {
 }
 
 @media (hover: none) {
-  #christmasButton {
+  #christmas-button {
     display: none;
   }
 }
 
-#snowflakeCaption.pressed {
+#snowflake-caption.pressed {
   transform: perspective(100px) translateZ(-15px);
   color: white;
   border: none;
@@ -302,7 +302,7 @@ header .underlineOnHover:hover {
   box-shadow: 0px 0px 5px 3px white;
 }
 
-span.newSnowflake {
+span.new-snowflake {
   /* Change colour of snowflake */
   filter: invert(100%) grayscale(100%);
   top: 0;
@@ -329,12 +329,12 @@ span.newSnowflake {
   }
 }
 
-#facebookWrapper {
+#facebook-wrapper {
   display: flex;
   margin: 2em 0em;
 }
 
-#fbFeed {
+#fb-feed {
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 3px 3px 5px rgb(var(--secondary-bg-color));
@@ -357,7 +357,7 @@ span.newSnowflake {
   margin-bottom: 1em;
 }
 
-.dadAlert {
+.dad-alert {
   background-color: rgb(241, 89, 89);
 }
 
@@ -379,7 +379,7 @@ span.newSnowflake {
   }
 }
 
-.slideshowImages {
+.slideshow-images {
   position: absolute;
   margin: auto;
   left: 0;
@@ -423,7 +423,7 @@ span.newSnowflake {
 
 /* || Contact Us Page */
 
-#findUs {
+#find-us {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -432,12 +432,12 @@ span.newSnowflake {
 }
 
 @media (max-width: 420px) {
-  #findUs {
+  #find-us {
     padding-top: 4em;
   }
 }
 
-#findUs > h3 {
+#find-us > h3 {
   padding: 1em;
 }
 
@@ -448,27 +448,27 @@ span.newSnowflake {
   background-color: rgb(var(--secondary-bg-color));
 }
 
-.contactInfo {
+.contact-info {
   text-align: center;
   padding: 0.5em 1em;
 }
 
-.contactInfo > h3 {
+.contact-info > h3 {
   padding: 1em 0em 0em;
 }
 
-#hoursWrapper {
+#hours-wrapper {
   display: flex;
   justify-content: center;
 }
 
 @media (max-width: 650px) {
-  #hoursWrapper {
+  #hours-wrapper {
     flex-direction: column;
   }
 }
 
-#openingHours #outsideHours {
+#opening-hours #outside-hours {
   padding-top: 1em;
 }
 
@@ -488,46 +488,46 @@ span.newSnowflake {
   transform: perspective(100px) translateZ(10px);
 }
 
-#contactDetails {
+#contact-details {
   padding-bottom: 1.5em;
 }
 
 @media (max-width: 440px) {
-  #emailAddress {
+  #email-address {
     font-size: 0.8em;
   }
 }
 
 /* || Community Engagement */
 
-#communityEngagementBlurb {
+#community-engagement-blurb {
   padding: 2em 0em;
   text-align: center;
 }
 
 @media (max-width: 420px) {
-  #communityEngagementBlurb {
+  #community-engagement-blurb {
     padding-top: 5em;
   }
 }
 
-#schoolSlideshow #figCaption {
+#school-slideshow #fig-caption {
   place-items: center;
 }
 
-#schoolSlideshow #slideshow {
+#school-slideshow #slideshow {
   place-items: flex-end;
 }
 
-#schoolSlideshow .slideshowImages {
+#school-slideshow .slideshow-images {
   box-shadow: 7px 0px 5px -5px rgb(var(--secondary-bg-color));
 }
 
-#figCaption {
+#fig-caption {
   position: relative;
 }
 
-.schoolCaptions {
+.school-captions {
   background-color: rgba(var(--secondary-bg-color), 0.3);
   text-align: center;
   margin: auto;
@@ -540,40 +540,40 @@ span.newSnowflake {
   transition: opacity 2s ease-in-out;
 }
 
-#figCaption .schoolCaptions:not(:first-child) {
+#fig-caption .school-captions:not(:first-child) {
   display: none;
   opacity: 0;
 }
 
-#schoolsReached {
+#schools-reached {
   padding: 2em 2em;
   text-align: center;
   margin-top: 3em;
 }
 
-#schoolsReached ul {
+#schools-reached ul {
   padding: 1em 0em;
 }
 
-#schoolsReached li {
+#schools-reached li {
   text-align: center;
   list-style: square;
   list-style: none;
 }
 
-#getInvolved {
+#get-involved {
   padding-top: 1em;
 }
 
 /* || Pricing and FAQs */
 
-#pricingAndImageWrapper {
+#pricing-and-image-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 5em;
 }
 
-#moreInfoMain h3 {
+#more-info-main h3 {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -586,34 +586,34 @@ span.newSnowflake {
   margin-top: 1em;
 }
 
-#priceList {
+#price-list {
   list-style: none;
   padding-bottom: 3em;
 }
 
-#priceList > li {
+#price-list > li {
   padding: 0.5em;
 }
 
-#moreInfoImage {
+#more-info-image {
   text-align: center;
   margin-left: 3em;
   margin-top: 1em;
 }
 
 @media (max-width: 800px) {
-  #pricingAndImageWrapper {
+  #pricing-and-image-wrapper {
     flex-direction: column;
   }
   #pricing {
     margin-right: 0em;
   }
-  #moreInfoImage {
+  #more-info-image {
     margin-left: 0em;
   }
 }
 
-#moreInfoImage > img {
+#more-info-image > img {
   max-width: 80vw;
   max-height: 500px;
 }

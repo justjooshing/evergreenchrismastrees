@@ -1,13 +1,15 @@
-const landingPage = document.querySelector('[data-page="landingPage"]');
+const landingPage = document.querySelector('[data-page="landing-page"]');
 const communityEngagement = document.querySelector(
-  '[data-page="communityEngagement"]'
+  '[data-page="community-engagement"]'
 );
-const contactUs = document.querySelector('[data-page="contactUs"]');
-const moreInformation = document.querySelector('[data-page="moreInformation"]');
+const contactUs = document.querySelector('[data-page="contact-us"]');
+const moreInformation = document.querySelector(
+  '[data-page="more-information"]'
+);
 
 //Hamburger menu visibility toggle
 const hamburger = document.getElementById("hamburger-menu");
-const dropmenu = document.getElementById("dropmenu");
+const dropmenu = document.getElementById("drop-menu");
 const links = document.querySelectorAll(".nav-link");
 
 hamburger.addEventListener("click", () => {
@@ -34,7 +36,7 @@ window.onscroll = () => {
 
 //Image slideshow
 if (landingPage || communityEngagement) {
-  const slides = document.querySelectorAll(".slideshowImages");
+  const slides = document.querySelectorAll(".slideshow-images");
   slides.forEach((slide) => {
     slide.style.display = "block";
   });
@@ -42,7 +44,7 @@ if (landingPage || communityEngagement) {
 
   //Change caption
   if (communityEngagement) {
-    const schoolCaptions = document.querySelectorAll(".schoolCaptions");
+    const schoolCaptions = document.querySelectorAll(".school-captions");
     schoolCaptions.forEach((caption) => {
       caption.style.display = "block";
     });
@@ -73,11 +75,11 @@ if (landingPage || communityEngagement) {
 }
 
 //Christmas button click
-const christmasButton = document.getElementById("christmasButton");
+const christmasButton = document.getElementById("christmas-button");
 
 const cursor = snowflakeCursor();
 christmasButton.addEventListener("click", () => {
-  const caption = document.getElementById("snowflakeCaption");
+  const caption = document.getElementById("snowflake-caption");
   caption.classList.toggle("pressed");
   if (christmasButton.dataset.snowflake === "disabled") {
     cursor.start();
@@ -178,7 +180,7 @@ function snowflakeCursor() {
 
       this.element = document.createElement("span");
       this.element.innerHTML = character;
-      this.element.classList.add("newSnowflake");
+      this.element.classList.add("new-snowflake");
       this.update();
 
       document.body.appendChild(this.element);
@@ -212,7 +214,7 @@ const dateNow = () => {
   const today = new Date();
   const christmas = new Date(today.getFullYear(), 11, 25);
   const oneDay = 1000 * 60 * 60 * 24; //ms*s*h*d
-  const footer = document.getElementById("daysUntil");
+  const footer = document.getElementById("days-until");
   if (today.getMonth === 11 && today.getDay > 25) {
     christmas.setFullYear(christmas.getFullYear() + 1);
   }
