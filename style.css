@@ -320,7 +320,6 @@ span.new-snowflake {
   display: flex;
   place-items: center;
   place-content: space-around;
-  padding-bottom: 3em;
 }
 
 @media (max-width: 1000px) {
