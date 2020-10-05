@@ -176,7 +176,7 @@ footer {
 }
 
 footer > #days-until {
-  font-size: calc(14px + (16 - 14) * ((100vw - 250px) / (1600 - 250)));
+  font-size: calc(12px + (16 - 12) * ((100vw - 250px) / (1600 - 250)));
   display: flex;
   justify-self: center;
   z-index: 1;
