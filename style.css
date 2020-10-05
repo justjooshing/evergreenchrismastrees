@@ -168,8 +168,9 @@ header {
 footer {
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: flex-end;
-  height: 2em;
+  height: auto;
   padding: 2px 1em;
   background: linear-gradient(180deg, var(--header-bg-color), 80%, #ccc);
   color: var(--header-text-color);

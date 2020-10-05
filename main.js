@@ -221,9 +221,9 @@ const dateNow = () => {
   if (Math.ceil((christmas.getTime() - today.getTime()) / oneDay) === 0) {
     footer.innerHTML = `🦌🦌🦌🦌🦌🛷 Merry Christmas! Today is the day! 🦌🦌🦌🦌🦌🛷`;
   } else {
-    footer.innerHTML = `🎄🎄It is only ${Math.ceil(
+    footer.innerHTML = `🎄It is only ${Math.ceil(
       (christmas.getTime() - today.getTime()) / oneDay
-    )} days until Christmas 🎄🎄`;
+    )} days until Christmas 🎄`;
   }
 };
 
