@@ -4,6 +4,7 @@ const communityEngagement = document.querySelector(
 );
 const contactUs = document.querySelector('[data-page="contact-us"]');
 const prices = document.querySelector('[data-page="prices"]');
+const faqs = document.querySelector('[data-page="FAQs"]');
 
 //Hamburger menu visibility toggle
 const hamburger = document.getElementById("hamburger-menu");
