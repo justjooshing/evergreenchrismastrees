@@ -131,34 +131,33 @@ header {
   }
 }
 
-#drop-menu {
+#fullscreen-menu {
   display: flex;
   flex-direction: column;
   position: fixed;
-  border-radius: 5px;
+  top: 0;
   right: 0;
-  margin: 17em 1em 0em 0em;
-  padding: 0.5em;
-  z-index: 1;
-  background: linear-gradient(180deg, var(--header-bg-color), 80%, #ccc);
-  border: var(--header-text-color) solid 1px;
-  color: var(--header-text-color);
-  text-align: right;
-}
-
-@media (max-width: 365px) {
-  #drop-menu {
-    margin-top: 18em;
-  }
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 90%;
+  z-index: 5;
+  background: linear-gradient(0deg, var(--main-bg-color), 80%, #ccc);
+  color: var(--main-text-color);
+  text-align: center;
+  justify-content: center;
+  line-height: 1em;
 }
 
 @media (min-width: 760px) {
-  #drop-menu {
+  #fullscreen-menu {
     display: none;
   }
 }
-#drop-menu > a {
-  margin: 0.2em;
+.menu-items {
+  background-color: transparent;
+  margin: 1.75em auto;
 }
 
 .hidden {

@@ -7,18 +7,22 @@ const prices = document.querySelector('[data-page="prices"]');
 
 //Hamburger menu visibility toggle
 const hamburger = document.getElementById("hamburger-menu");
-const dropmenu = document.getElementById("drop-menu");
-const links = document.querySelectorAll(".nav-link");
+const fullscreenMenu = document.getElementById("fullscreen-menu");
+const links = document.querySelectorAll(".menu-items");
 
 hamburger.addEventListener("click", () => {
-  dropmenu.classList.toggle("hidden");
+  fullscreenMenu.classList.toggle("hidden");
 });
 
 links.forEach((link) =>
   link.addEventListener("click", () => {
-    dropmenu.classList.add("hidden");
+    fullscreenMenu.classList.add("hidden");
   })
 );
+
+fullscreenMenu.addEventListener("click", () => {
+  fullscreenMenu.classList.add("hidden");
+});
 
 //Header disappear on scroll
 let prevScrollpos = window.pageYOffset;
