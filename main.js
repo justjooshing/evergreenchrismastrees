@@ -3,9 +3,7 @@ const communityEngagement = document.querySelector(
   '[data-page="community-engagement"]'
 );
 const contactUs = document.querySelector('[data-page="contact-us"]');
-const moreInformation = document.querySelector(
-  '[data-page="more-information"]'
-);
+const prices = document.querySelector('[data-page="prices"]');
 
 //Hamburger menu visibility toggle
 const hamburger = document.getElementById("hamburger-menu");

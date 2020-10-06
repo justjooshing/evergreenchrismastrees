@@ -329,17 +329,6 @@ span.new-snowflake {
   }
 }
 
-#facebook-wrapper {
-  display: flex;
-  margin: 2em 0em;
-}
-
-#fb-feed {
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 3px 3px 5px rgb(var(--secondary-bg-color));
-}
-
 #blurb {
   display: flex;
   flex-direction: column;
@@ -347,15 +336,9 @@ span.new-snowflake {
   padding: 3em 0em 2em;
   font-family: var(--main-text-font);
   font-size: 0.6em;
-  width: 50%;
+  width: 90%;
   justify-content: center;
   line-height: 130%;
-}
-
-@media (max-width: 1000px) {
-  #blurb {
-    width: 90%;
-  }
 }
 
 #blurb > p {
@@ -577,10 +560,6 @@ span.new-snowflake {
   text-align: center;
   list-style: square;
   list-style: none;
-}
-
-#get-involved {
-  padding-top: 1em;
 }
 
 /* || Pricing and FAQs */
