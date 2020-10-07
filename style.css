@@ -505,12 +505,6 @@ span.new-snowflake {
   text-align: center;
 }
 
-@media (max-width: 420px) {
-  #community-engagement-blurb {
-    padding-top: 5em;
-  }
-}
-
 @media (max-width: 400px) {
   #school-slideshow {
     margin-top: 5em;
@@ -554,7 +548,7 @@ span.new-snowflake {
 #schools-reached {
   padding: 2em 2em;
   text-align: center;
-  margin-top: 3em;
+  margin-top: 5em;
 }
 
 #schools-reached ul {
