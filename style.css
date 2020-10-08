@@ -70,7 +70,6 @@ header {
   display: flex;
   color: var(--header-text-color);
   font-family: var(--header-text-font);
-  max-width: 200px;
   text-align: center;
   line-height: 1em;
 }
@@ -78,12 +77,6 @@ header {
 #header-title > a {
   line-height: unset;
   text-decoration: none;
-}
-
-@media (min-width: 500px) {
-  #header-title {
-    max-width: 500px;
-  }
 }
 
 #header-image {
@@ -366,6 +359,12 @@ span.new-snowflake {
 @media (max-width: 400px) {
   #slideshow {
     height: 55vh;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  #slideshow {
+    max-height: 80vh;
   }
 }
 
