@@ -433,12 +433,6 @@ span.new-snowflake {
   padding-bottom: 0.5em;
 }
 
-@media (max-width: 420px) {
-  #find-us {
-    padding-top: 4em;
-  }
-}
-
 #find-us > h3 {
   padding: 1em;
 }
