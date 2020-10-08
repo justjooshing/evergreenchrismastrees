@@ -202,15 +202,15 @@ a {
   text-decoration: none transparent;
 }
 
-header .underline-on-hover:hover {
-  text-decoration: underline;
-  transform: translateY(2px);
-}
-@supports (-webkit-touch-callout: none) {
+@supports not (-webkit-touch-callout: none) {
   header .underline-on-hover:hover {
-    text-decoration: none;
+    text-decoration: underline;
+    transform: translateY(2px);
+  }
   }
 }
+
+
 
 .underline-on-hover:hover > figcaption {
   text-decoration: underline;
@@ -369,7 +369,7 @@ span.new-snowflake {
 
 @supports (-webkit-touch-callout: none) {
   #slideshow {
-    max-height: 80vh;
+    max-height: 60vh;
   }
 }
 
