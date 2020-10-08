@@ -33,7 +33,7 @@ body {
   font-size: 16px;
 }
 
-@media screen and (max-device-width: 480px) {
+@media (max-device-width: 480px) {
   body {
     -webkit-text-size-adjust: 100%;
   }
