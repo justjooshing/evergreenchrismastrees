@@ -207,7 +207,6 @@ a {
     text-decoration: underline;
     transform: translateY(2px);
   }
-  }
 }
 
 .underline-on-hover:hover > figcaption {
