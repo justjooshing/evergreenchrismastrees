@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  line-height: 2em;
 }
 
 html {
@@ -24,10 +25,9 @@ html {
   position: relative;
   display: inline-block;
   color: var(--main-text-color);
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
+  font-size: 16px !important;
+  -webkit-text-size-adjust: 100% !important;
   font-family: var(--main-text-font);
-  line-height: 2em;
 }
 
 body {
