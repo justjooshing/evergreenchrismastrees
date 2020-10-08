@@ -11,8 +11,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: var(--main-text-font);
-  line-height: 2em;
 }
 
 html {
@@ -28,6 +26,8 @@ html {
   color: var(--main-text-color);
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  font-family: var(--main-text-font);
+  line-height: 2em;
 }
 
 body {
