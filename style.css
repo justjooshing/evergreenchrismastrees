@@ -26,7 +26,7 @@ html {
   display: inline-block;
   color: var(--main-text-color);
   font-size: 16px;
-  -webkit-text-size-adjust: 100% !important;
+  -webkit-text-size-adjust: 100%;
   font-family: var(--main-text-font);
 }
 
