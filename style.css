@@ -199,7 +199,7 @@ a {
 .underline-on-hover {
   transition: text-decoration 0.5s ease-in-out;
   transition: transform 0.1s ease-in;
-  text-decoration: none transparent;
+  text-decoration: none;
 }
 
 @media (hover: hover) {
