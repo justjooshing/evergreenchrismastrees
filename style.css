@@ -202,15 +202,13 @@ a {
   text-decoration: none transparent;
 }
 
-@supports not (-webkit-touch-callout: none) {
+@media (hover: hover) {
   header .underline-on-hover:hover {
     text-decoration: underline;
     transform: translateY(2px);
   }
   }
 }
-
-
 
 .underline-on-hover:hover > figcaption {
   text-decoration: underline;
