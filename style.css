@@ -201,7 +201,7 @@ a {
   text-decoration: transparent;
 }
 
-@media (max-width: 480px) {
+@media (hover: none) {
   .underline-on-hover {
     text-decoration: none;
   }
