@@ -197,9 +197,8 @@ a {
 }
 
 .underline-on-hover {
-  transition: text-decoration 0.5s ease-in-out;
-  transition: transform 0.1s ease-in;
-  text-decoration: none;
+  transition: text-decoration 0.5s ease-in-out, transform 0.1s ease-in;
+  text-decoration: transparent;
 }
 
 @media (hover: hover) {
