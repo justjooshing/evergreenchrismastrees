@@ -198,8 +198,12 @@ a {
 }
 
 .underline-on-hover {
-  transition: text-decoration 0.5s ease-in-out, transform 0.1s ease-in;
+  transition: text-decoration 0.5s ease-in-out;
   text-decoration: transparent;
+}
+
+.underline-on-hover > img {
+  transition: transform 0.5s ease-in-out;
 }
 
 header .underline-on-hover:hover {
@@ -217,6 +221,10 @@ header .underline-on-hover:hover {
 .underline-on-hover:hover > figcaption {
   text-decoration: underline;
   transform: translateY(-2px);
+}
+.underline-on-hover:hover > img {
+  text-decoration: underline;
+  transform: scale(1.1);
 }
 
 /* Christmas button setup */
