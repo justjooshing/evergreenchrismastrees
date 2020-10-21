@@ -400,7 +400,12 @@ span.new-snowflake {
   box-shadow: 2px 2px 5px rgb(var(--secondary-bg-color));
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media (min-height: 700px) and (min-width: 1000px) and (orientation: portrait) {
+  #slideshow-images {
+    max-height: 60vh;
+  }
+}
+@media (min-width: 700px) and (min-height: 1000px) and (orientation: portrait) {
   #slideshow-images {
     max-height: 60vh;
   }
