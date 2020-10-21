@@ -401,12 +401,12 @@ span.new-snowflake {
 }
 
 @media (min-height: 700px) and (min-width: 900px) and (orientation: portrait) {
-  #slideshow-images {
+  .slideshow-images {
     max-height: 60vh;
   }
 }
 @media (min-width: 700px) and (min-height: 900px) and (orientation: portrait) {
-  #slideshow-images {
+  .slideshow-images {
     max-height: 60vh;
   }
 }
