@@ -362,7 +362,7 @@ span.new-snowflake {
 #slideshow {
   position: relative;
   display: flex;
-  height: 60vh;
+  height: 80vh;
   place-items: center;
 }
 
@@ -398,6 +398,12 @@ span.new-snowflake {
   max-height: 100%;
   transition: opacity 2s ease-in-out;
   box-shadow: 2px 2px 5px rgb(var(--secondary-bg-color));
+}
+
+@media (min-height: 700px) and (min-width: 900px) and (orientation: portrait) {
+  .slideshow-images {
+    max-height: 60vh;
+  }
 }
 
 .page-links {
