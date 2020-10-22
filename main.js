@@ -240,6 +240,6 @@ if (contactUs) {
     const lastSaturday = date.setDate(date.getDate() - weekday - 1); //backtracks to the last Sunday -1 (so, saturday)
     return date.getDate(); //returns day number
   };
-  let lastSaturday = lastFullWeekend(new Date().getFullYear(), 11);
+  const lastSaturday = lastFullWeekend(new Date().getFullYear(), 11);
   inputLastSaturday.innerHTML = `${lastSaturday}th`;
 }
