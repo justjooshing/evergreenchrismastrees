@@ -236,6 +236,13 @@ header .underline-on-hover:hover {
   position: fixed;
   bottom: 50%;
   right: 3em;
+  display: none;
+}
+
+@media not all and (hover: none) {
+  #christmas-button {
+    display: block;
+  }
 }
 
 #snowflake-parts {
@@ -296,12 +303,6 @@ header .underline-on-hover:hover {
   top: 4em;
   right: -1.8em;
   transition: transform 0.1s ease-in-out;
-}
-
-@media (hover: none) {
-  #christmas-button {
-    display: none;
-  }
 }
 
 #snowflake-caption.pressed {
