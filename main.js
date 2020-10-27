@@ -1,3 +1,12 @@
+const checkForIE = () => {
+  if (window.document.documentMode) {
+    document.body.innerHTML = "Please upgrade to a better browser";
+    document.body.style.background = "white";
+    document.body.style.color = "black";
+  }
+};
+checkForIE();
+
 const landingPage = document.querySelector('[data-page="landing-page"]');
 const communityEngagement = document.querySelector(
   '[data-page="community-engagement"]'

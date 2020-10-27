@@ -15,13 +15,6 @@
 }
 
 html {
-  background: linear-gradient(
-    180deg,
-    rgb(24, 77, 0) 25%,
-    rgb(21, 66, 0),
-    80%,
-    rgb(19, 40, 0)
-  );
   position: relative;
   display: inline-block;
   color: var(--main-text-color);
@@ -32,6 +25,13 @@ html {
 
 body {
   overflow-x: hidden;
+  background: linear-gradient(
+    180deg,
+    rgb(24, 77, 0) 25%,
+    rgb(21, 66, 0),
+    80%,
+    rgb(19, 40, 0)
+  );
 }
 
 main {
