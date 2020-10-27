@@ -20,6 +20,15 @@
       rel="stylesheet"
     />
     <script async defer src="./main.js"></script>
+    <script>
+      defer;
+      if (window.document.documentMode) {
+        document.body.innerHTML =
+          "This website is unsupported by Internet Explorer, please upgrade to a modern browser";
+        document.body.style.background = "white";
+        document.body.style.color = "black";
+      }
+    </script>
   </head>
   <body data-page="landing-page">
     <header id="header">
