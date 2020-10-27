@@ -199,6 +199,7 @@ a {
 .underline-on-hover {
   transition: text-decoration 0.5s ease-in-out;
   text-decoration: transparent;
+  width: 100%;
 }
 
 .underline-on-hover > img {
