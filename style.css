@@ -237,7 +237,7 @@ header .underline-on-hover:hover {
   right: 3em;
 }
 
-@media (hover: none) {
+@media (pointer: coarse) {
   #christmas-button {
     display: none;
   }
