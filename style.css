@@ -407,7 +407,7 @@ span.new-snowflake {
   }
 }
 
-.page-links {
+#page-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 1em 1em 3em;
