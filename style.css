@@ -108,12 +108,12 @@ header {
 
 #nav-bar {
   display: flex;
-  padding-right: 4em;
+  padding-right: 1em;
   white-space: nowrap;
 }
 
 #nav-bar > a {
-  padding: 0px 3%;
+  padding: 0px 10px;
   font-size: small;
   text-align: center;
   color: var(--header-text-color);
