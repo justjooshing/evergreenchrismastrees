@@ -509,6 +509,10 @@ span.new-snowflake {
   padding-bottom: 1.5em;
 }
 
+#contact-phone-number {
+  text-decoration: none;
+}
+
 @media (max-width: 440px) {
   #email-address {
     font-size: 0.8em;
