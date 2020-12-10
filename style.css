@@ -90,7 +90,7 @@ header {
   border-radius: 30%;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   #hamburger-menu {
     display: none;
   }
@@ -121,7 +121,7 @@ header {
   place-items: center;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   #nav-bar {
     display: none;
   }
@@ -146,7 +146,7 @@ header {
   line-height: 1em;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 800px) {
   #fullscreen-menu {
     display: none;
   }
