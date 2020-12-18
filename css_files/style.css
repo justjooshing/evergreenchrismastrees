@@ -1,0 +1,328 @@
+:root {
+  --header-bg-color: rgb(255, 255, 255); /*White*/
+  --header-text-color: rgb(249, 39, 39); /*Red*/
+  --main-text-color: rgb(255, 255, 255); /*White*/
+  --main-bg-color: rgb(24, 77, 0); /*Green*/
+  --secondary-bg-color: 0, 0, 0; /*Black - no rgb prepend so can add opacity when needed*/
+  --main-text-font: "Lemonada";
+  --header-text-font: "Italianno";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 2em;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  display: inline-block;
+  color: var(--main-text-color);
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  font-family: var(--main-text-font);
+}
+
+body {
+  overflow-x: hidden;
+  background: linear-gradient(
+    180deg,
+    rgb(24, 77, 0) 25%,
+    rgb(21, 66, 0),
+    80%,
+    rgb(19, 40, 0)
+  );
+}
+
+main {
+  margin: 4em 2em 2em;
+}
+
+@media (max-width: 354px) {
+  main {
+    margin-top: 7em;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  background: linear-gradient(180deg, var(--header-bg-color), 80%, #ccc);
+  transition: top 0.5s ease-in-out;
+}
+
+#header-title-and-image {
+  display: flex;
+  align-items: center;
+}
+
+#header-title {
+  font-size: 2.5em;
+  padding: 0em 0.5em;
+  display: flex;
+  color: var(--header-text-color);
+  font-family: var(--header-text-font);
+  text-align: center;
+  line-height: 1em;
+  margin: 0;
+}
+
+#header-title > a {
+  line-height: unset;
+  text-decoration: none;
+}
+
+#header-image {
+  height: 70px;
+}
+
+#hamburger-menu {
+  cursor: pointer;
+  background-color: inherit;
+  padding: 0.5em;
+  border-radius: 30%;
+}
+
+@media (min-width: 800px) {
+  #hamburger-menu {
+    display: none;
+  }
+}
+
+#hamburger-menu > span {
+  display: block;
+  width: 27px;
+  height: 4px;
+  margin-bottom: 4px;
+  background-color: transparent;
+  border-radius: 15%/45%;
+  border: solid var(--header-text-color) 1px;
+}
+
+#nav-bar {
+  display: flex;
+  padding-right: 1em;
+  white-space: nowrap;
+}
+
+#nav-bar > a {
+  padding: 0px 10px;
+  font-size: small;
+  text-align: center;
+  color: var(--header-text-color);
+  display: flex;
+  place-items: center;
+}
+
+@media (max-width: 800px) {
+  #nav-bar {
+    display: none;
+  }
+}
+
+#fullscreen-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 99%;
+  z-index: 1;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+  justify-content: center;
+  line-height: 1em;
+}
+
+@media (min-width: 800px) {
+  #fullscreen-menu {
+    display: none;
+  }
+}
+.menu-items {
+  background-color: transparent;
+  margin: 1.75em auto;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  height: auto;
+  background: linear-gradient(180deg, var(--header-bg-color), 80%, #ccc);
+  color: var(--header-text-color);
+}
+
+footer > #days-until {
+  font-size: calc(12px + (16 - 12) * ((100vw - 250px) / (1600 - 250)));
+  display: flex;
+  justify-self: center;
+  z-index: 1;
+  margin: auto;
+}
+
+footer a {
+  line-height: 0;
+}
+
+#footer-logo-group {
+  display: flex;
+}
+
+.logo {
+  height: 25px;
+  padding: 0em 0.5em;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+}
+
+.underline-on-hover {
+  transition: text-decoration 0.5s ease-in-out;
+  text-decoration: transparent;
+  width: 100%;
+}
+
+.underline-on-hover > img {
+  transition: transform 0.2s ease-in-out;
+}
+
+header .underline-on-hover:hover {
+  text-decoration: underline;
+  transform: translateY(2px);
+}
+
+@media (pointer: coarse) {
+  .underline-on-hover {
+    text-decoration: none;
+    transform: none;
+  }
+}
+
+.underline-on-hover:hover > figcaption {
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+.underline-on-hover:hover > img {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* Christmas button setup */
+
+#christmas-button {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  position: fixed;
+  bottom: 50%;
+  right: 3em;
+}
+
+@media (pointer: coarse) {
+  #christmas-button {
+    display: none;
+  }
+}
+
+#snowflake-parts {
+  position: relative;
+  display: contents;
+}
+
+.stroke {
+  height: 2em;
+  width: 1px;
+  background-color: snow;
+  position: absolute;
+  left: 1em;
+}
+
+.stroke:before,
+.stroke:after {
+  content: "";
+  border: 1px solid snow;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: -2.5px;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+}
+
+.stroke:after {
+  bottom: 0;
+  transform: rotate(-135deg);
+}
+
+.stroke-2 {
+  transform: rotate(90deg);
+}
+
+.stroke-3 {
+  transform: rotate(45deg);
+}
+.stroke-4 {
+  transform: rotate(-45deg);
+}
+
+#snowflake-caption {
+  user-select: none;
+  text-align: center;
+  color: var(--header-text-color);
+  background: linear-gradient(180deg, var(--header-bg-color), 70%, #ddd);
+  font-size: 0.5em;
+  border-radius: 50%;
+  padding: 1.1em;
+  margin: 1em;
+  box-shadow: 2px 2px 5px rgb(var(--secondary-bg-color));
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 4em;
+  right: -1.8em;
+  transition: transform 0.1s ease-in-out;
+}
+
+#snowflake-caption.pressed {
+  transform: perspective(100px) translateZ(-15px);
+  color: white;
+  border: none;
+  background: linear-gradient(180deg, rgb(245, 61, 61), 50%, rgb(190, 9, 9));
+  box-shadow: 0px 0px 5px 3px white;
+}
+
+span.new-snowflake {
+  /* Change colour of snowflake */
+  filter: invert(100%) grayscale(100%);
+  top: 0;
+  position: absolute;
+  display: initial;
+  pointer-events: none;
+  z-index: 10000000;
+  font-size: 1em;
+  will-change: transform;
+}

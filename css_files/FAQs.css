@@ -1,0 +1,24 @@
+#FAQs {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  color: var(--main-text-color);
+  text-align: center;
+  margin: 6em 0em 3em;
+  justify-content: center;
+}
+
+#FAQs details {
+  padding: 1em 0em;
+}
+
+#FAQs summary {
+  outline: none;
+  cursor: pointer;
+}
+
+#FAQs summary h4 {
+  display: inline;
+  max-width: 60%;
+  margin: auto;
+}

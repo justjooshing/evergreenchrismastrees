@@ -1,0 +1,12 @@
+#sold-out-stamp {
+  padding: 0.5em;
+  color: white;
+  font-size: 30px;
+  transform: rotate(-37deg);
+  position: absolute;
+  background: rgb(241, 89, 89);
+  top: 1.4em;
+  place-self: center;
+  border-radius: 25px;
+  z-index: 2;
+}
