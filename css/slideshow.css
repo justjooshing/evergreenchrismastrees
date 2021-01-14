@@ -1,7 +1,7 @@
 #slideshow {
   position: relative;
   display: flex;
-  height: 80vh;
+  height: 55vh;
   place-items: center;
 }
 
